@@ -25,6 +25,7 @@ const App = (props) => {
       </header>
 
       <figure>
+
         <figcaption>
           {currentImage + 1} / {images.length}
         </figcaption>
