@@ -1,9 +1,13 @@
 import './App.css';
 import React, { useState } from "react";
+import curry1 from "./assets/curry1.jpg";
+import curry2 from "./assets/curry2.jpg";
+import curry3 from "./assets/curry3.jpg";
+import curry4 from "./assets/curry4.jpg";
+import curry5 from "./assets/curry5.jpg";
+import curry6 from "./assets/curry6.jpg";
 
-const images = "https://source.unsplash.com/random"
-const subject = ["tokyo", "paris", "barcelona", "london", "medellin", "berlin"]
-const theme = subject[Math.floor(Math.random() * subject.length)];
+const images = [curry1, curry2, curry3, curry4, curry5, curry6 ]
 
 const App = (props) => {
 
@@ -20,8 +24,8 @@ const App = (props) => {
     <section className="App">
 
       <header className="title">
-        <h1>{theme}</h1>
-        <h2>A photography project<br/> by Unsplash</h2>
+        <h1>Curry</h1>
+        <h2>A photography project<br/> by Maxime Mondet</h2>
       </header>
 
       <figure>
@@ -29,7 +33,7 @@ const App = (props) => {
         <figcaption>
           {currentImage + 1} / {images.length}
         </figcaption>
-        <img alt="" src={images + "/" + theme} onClick={handleClick} />
+        <img alt="" src={images[currentImage]} onClick={handleClick} />
       </figure>
 
     </section>
